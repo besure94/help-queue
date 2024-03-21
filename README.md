@@ -18,7 +18,7 @@
 
 ## Description
 
-**Note: This branch is for the `initial-branch`/`main` branch.**
+**Note: This is for the `initial-branch`/`main` branch.**
 
 This application presents users with a home page for a help queue for troubleshooting technical issues. Users can select `Add Ticket`, which takes them to a template form. This is designed to just demonstrate toggling state.
 
