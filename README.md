@@ -18,7 +18,7 @@
 
 ## Description
 
-**Note: This branch is for the `create-functionality` branch.**
+**Note: This is for the `create-functionality` branch.**
 
 This application presents users with a home page for a help queue for troubleshooting technical issues. Users can select `Add Ticket`, which takes them to a form where they can submit their names, location, and issue they're experiencing. Selecting `Help!` will submit the ticket to the list on the home page.
 
