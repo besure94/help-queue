@@ -10,6 +10,7 @@ function TicketDetail(props) {
       <h3>{ticket.location} - {ticket.names}</h3>
       <p><em>{ticket.issue}</em></p>
       <button onClick={() => onClickingEdit(ticket.id)}>Update Ticket</button>
+      <br/>
       <button onClick={() => onClickingDelete(ticket.id)}>Close Ticket</button>
       <hr/>
     </React.Fragment>
