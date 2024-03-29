@@ -1,6 +1,7 @@
 import ticketListReducer from '../../reducers/ticket-list-reducer';
 import * as constants from '../../actions/ActionTypes';
 import { formatDistanceToNow } from 'date-fns';
+import { time } from 'console';
 
 describe('ticketListReducer', () => {
 
@@ -34,21 +35,24 @@ describe('ticketListReducer', () => {
     expect(ticketListReducer({}, {type: null})).toEqual({});
   });
 
-  test('Should successfully add new ticket data to mainTicketList', () => {
-    const { names, location, issue, id } = ticketData;
+  test('Should successfully add a new ticket to the ticket list that includes date-fns-formatted wait times.', () => {
+    const { names, location, issue, timeOpen, formattedWaitTime, id } = ticketData;
     action = {
       type: constants.ADD_TICKET,
       names: names,
       location: location,
       issue: issue,
+      timeOpen: timeOpen,
+      formattedWaitTime: formattedWaitTime,
       id: id
     };
-
     expect(ticketListReducer({}, action)).toEqual({
       [id] : {
         names: names,
         location: location,
         issue: issue,
+        timeOpen: timeOpen,
+        formattedWaitTime: 'less than a minute ago',
         id: id
       }
     });
