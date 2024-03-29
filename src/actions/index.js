@@ -1,4 +1,3 @@
-import { format } from 'path';
 import * as constants from './../actions/ActionTypes';
 
 export const deleteTicket = id => ({
