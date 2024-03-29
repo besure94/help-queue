@@ -1,3 +1,4 @@
+import { format } from 'path';
 import * as constants from './../actions/ActionTypes';
 
 export const deleteTicket = id => ({
@@ -10,12 +11,14 @@ export const toggleForm = () => ({
 });
 
 export const addTicket = (ticket) => {
-  const { names, location, issue, id } = ticket;
+  const { names, location, issue, id, timeOpen, formattedWaitTime } = ticket;
   return {
     type: constants.ADD_TICKET,
     names: names,
     location: location,
     issue: issue,
+    timeOpen: timeOpen,
+    formattedWaitTime: formattedWaitTime,
     id: id
   }
 }

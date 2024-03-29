@@ -20,12 +20,16 @@ describe('Help Queue actions', () => {
       names: 'John and Don',
       location: '3E',
       issue: 'Redux not working.',
+      timeOpen: 0,
+      formattedWaitTime: 'less than a minute ago',
       id: 1
     })).toEqual({
       type: 'ADD_TICKET',
       names: 'John and Don',
       location: '3E',
       issue: 'Redux not working.',
+      timeOpen: 0,
+      formattedWaitTime: 'less than a minute ago',
       id: 1
     });
   });
