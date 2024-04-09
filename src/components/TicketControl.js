@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NewTicketForm from './NewTicketForm';
 import TicketList from './TicketList';
 import TicketDetail from './TicketDetail';
 import EditTicketForm from './EditTicketForm';
-import React, { useState } from 'react';
+import db from './../firebase.js';
+import { collection, addDoc } from 'firebase/firestore';
 
 function TicketControl() {
 
@@ -26,9 +27,10 @@ function TicketControl() {
     setEditing(true);
   }
 
-  const handleAddingNewTicketToList = (newTicket) => {
-    const newMainTicketList = mainTicketList.concat(newTicket);
-    setMainTicketList(newMainTicketList);
+  const handleAddingNewTicketToList = async (newTicketData) => {
+    // const collectionRef = collection(db, "tickets");
+    // await addDoc(collectionRef, newTicketData);
+    await addDoc(collection(db, "tickets"), newTicketData);
     setFormVisibleOnPage(false);
   }
 
