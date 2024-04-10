@@ -52,8 +52,6 @@ function TicketControl() {
   }
 
   const handleAddingNewTicketToList = async (newTicketData) => {
-    // const collectionRef = collection(db, "tickets");
-    // await addDoc(collectionRef, newTicketData);
     await addDoc(collection(db, "tickets"), newTicketData);
     setFormVisibleOnPage(false);
   }
@@ -69,10 +67,9 @@ function TicketControl() {
     setSelectedTicket(null);
   }
 
-  const handleEditingTicketInList = (ticketToEdit) => {
-    const editedMainTicketList = mainTicketList.filter(ticket => ticket.id !== selectedTicket.id)
-    .concat(ticketToEdit);
-    setMainTicketList(editedMainTicketList);
+  const handleEditingTicketInList = async (ticketToEdit) => {
+    const ticketRef = doc(db, "tickets", ticketToEdit.id);
+    await updateDoc(ticketRef, ticketToEdit);
     setEditing(false);
     setSelectedTicket(null);
   }
