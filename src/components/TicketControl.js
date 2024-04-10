@@ -61,9 +61,8 @@ function TicketControl() {
     setSelectedTicket(selection);
   }
 
-  const handleDeletingTicket = (id) => {
-    const newMainTicketList = mainTicketList.filter(ticket => ticket.id !== id);
-    setMainTicketList(newMainTicketList);
+  const handleDeletingTicket = async (id) => {
+    await deleteDoc(doc(db, "tickets", id));
     setSelectedTicket(null);
   }
 
