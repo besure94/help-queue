@@ -18,9 +18,11 @@
 
 ## Description
 
-**Note: This is for the `initial-branch`/`main` branch.**
+**Note: This is for the `main` branch.**
 
-This application presents users with a home page for a help queue for troubleshooting technical issues. Users can select `Add Ticket`, which takes them to a template form. This is designed to just demonstrate toggling state.
+This application presents users with a home page for a help queue for troubleshooting technical issues. Users can select `Add Ticket`, which takes them to a form where they can submit their names, location, and issue they're experiencing. Selecting `Help!` will submit the ticket to the list on the home page.
+
+A user can select a ticket's details by clicking on it. After doing so, they have the option to update (edit) the ticket, or close (delete) it from the queue.
 
 To view a diagram of this application to understand its component structure, [click here](./Help_Queue_Diagram.drawio.svg).
 
@@ -39,3 +41,5 @@ None.
 MIT
 
 Copyright(c) 2024 Brian Scherner
+
+
