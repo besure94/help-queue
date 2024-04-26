@@ -22,20 +22,23 @@ function ReusableForm(props) {
           style={inputStyles}
           type="text"
           name="names"
-          placeholder="Pair Names"/>
+          placeholder="Pair Names"
+          required/>
         <br/>
         <input
           style={inputStyles}
           type="text"
           name="location"
-          placeholder="Location"/>
+          placeholder="Location"
+          required/>
         <br/>
         <textarea
           style={inputStyles}
           name="issue"
-          placeholder="Describe your issue."/>
+          placeholder="Describe your issue."
+          required/>
         <br/>
-        <button style={inputStyles} type="submit">{props.buttonText}</button>
+        <button style={buttonStyles} type="submit">{props.buttonText}</button>
       </form>
       <br/>
     </React.Fragment>
